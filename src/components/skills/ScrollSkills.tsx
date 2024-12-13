@@ -1,12 +1,10 @@
-import { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useState } from 'react';
 import reactLogo from "../../assets/icons/react.webp";
 import taiwindLogo from "../../assets/icons/tailwind.webp";
 import nextjsLogo from "../../assets/icons/next-js.webp";
 import typescriptLogo from "../../assets/icons/typescript.webp";
 import javascriptLogo from "../../assets/icons/js.webp";
 import nodelogo from "../../assets/icons/nodejs.webp";
-import dockerLogo from "../../assets/icons/dockerimg.webp";
 import mongodbLogo from "../../assets/icons/mongodb.webp";
 import reactNativelogo from  "../../assets/icons/react.webp";
 interface Skill {
@@ -103,14 +101,9 @@ const skills = [
 
 const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
     const [isHovered, setIsHovered] = useState(false);
-    const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
   
-    const handleMouseEnter = (e: React.MouseEvent) => {
-      const rect = e.currentTarget.getBoundingClientRect();
-      setTooltipPosition({
-        x: rect.left + rect.width / 2,
-        y: rect.top
-      });
+    const handleMouseEnter = () => {
+   
       setIsHovered(true);
     };
   

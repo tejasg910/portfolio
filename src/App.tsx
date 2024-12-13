@@ -17,21 +17,7 @@ function App() {
     ['100vh', '0vh'] // Output range
   );
 
-  // Transform for Experience section
-  const experienceTransform = useTransform(
-    scrollY,
-    [window.innerHeight, 2 * window.innerHeight], // Input range (second viewport height)
-    ['100vh', '0vh'] // Output range
-  );
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
+
   return (
     <>
       <main className="relative">

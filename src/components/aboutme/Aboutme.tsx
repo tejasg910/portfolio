@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { motion } from 'framer-motion';
 import { BorderBeam } from '../Beam';
 import resume from "../../assets/Tejas_giri_full_stack_engineer_2years.pdf"

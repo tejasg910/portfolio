@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import reactLogo from "../../assets/icons/react.webp";
 import taiwindLogo from "../../assets/icons/tailwind.webp";
@@ -6,7 +5,6 @@ import nextjsLogo from "../../assets/icons/next-js.webp";
 import typescriptLogo from "../../assets/icons/typescript.webp";
 import javascriptLogo from "../../assets/icons/js.webp";
 import nodelogo from "../../assets/icons/nodejs.webp";
-import dockerLogo from "../../assets/icons/dockerimg.webp";
 import mongodbLogo from "../../assets/icons/mongodb.webp";
 import reactnativeLogo from "../../assets/icons/react.webp";
 
@@ -128,7 +126,7 @@ const SkillsOrbit = () => {
 
 
   const style = document.createElement('style');
-  style.textContent = skills.map((skill, index) => `
+  style.textContent = skills.map((_, index) => `
   @keyframes orbit-custom-${index} {
     from {
       transform: rotate(${index * 47}deg);
@@ -141,14 +139,6 @@ const SkillsOrbit = () => {
   document.head.appendChild(style);
 
   // Group skills by orbit for more even distribution
-  const orbitGroups = skills.reduce((acc, skill) => {
-    const orbitKey = Math.floor(skill.orbit);
-    if (!acc[orbitKey]) {
-      acc[orbitKey] = [];
-    }
-    acc[orbitKey].push(skill);
-    return acc;
-  }, {} as Record<number, Skill[]>);
 
   return (
     <div className="mt-8 hidden md:flex items-center ">
