@@ -38,12 +38,12 @@ I'm Tejas
     A self-taught developer with an interest in Computer Science.
   </p>
   <div className="mt-5">
-    <p className="text-xl text-gray-300">
+    <p className="text-xl text-gray-300 leading-10">
       Currently specializing in{' '}
-      <span className="rounded-full bg-yellow-500 px-4 py-1">Frontend</span>{' '}
-      <span className="rounded-full bg-purple-500 px-4 py-1">Backend</span>{' '}
+      <span className="rounded-full bg-yellow-500 px-4 py-1 ">Frontend</span>{' '}
+      <span className="rounded-full bg-purple-500 px-4 py-1 ">Backend</span>{' '}
       and{' '}
-      <span className="rounded-full bg-blue-500 px-4 py-1">Mobile</span>
+      <span className="rounded-full bg-blue-500 px-4 py-1 ">Mobile</span>
     </p>
     <p className="mt-2 text-gray-300">SDE-I at Ipangram</p>
   </div>

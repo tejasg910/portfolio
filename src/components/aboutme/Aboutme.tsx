@@ -36,13 +36,11 @@ const AboutMeSection = () => {
 
 
   return (
-    <div className="min-h-screen bg-[#0A0A0F] relative px-4 ">
-      {/* Background gradients */}
+<div className="min-h-screen bg-[#0A0A0F] relative px-4 overflow-hidden">      {/* Background gradients */}
       <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-pink-600/30 blur-[120px]" />
       <div className="absolute right-0 top-0 h-[300px] w-[300px] rounded-full bg-blue-600/30 blur-[120px]" />
       
-      <div className="max-w-6xl mx-auto relative z-10">
-        <motion.div
+      <div className="max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8">        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
@@ -53,8 +51,7 @@ const AboutMeSection = () => {
         </motion.div>
 
         <div className="flex justify-center items-start min-h-[600px]">
-          <div 
-            className="w-[450px] h-[400px] relative"
+         <div className="w-full max-w-[450px] h-auto aspect-[9/8] relative"
             onMouseEnter={() => setIsFlipped(true)}
             onMouseLeave={() => setIsFlipped(false)}
           >
@@ -68,14 +65,14 @@ const AboutMeSection = () => {
               style={{ transformStyle: "preserve-3d" }}
             >
               {/* Front of card */}
-              <div className="absolute w-full h-full backface-hidden">
+              <div className="absolute w-full min-h-full backface-hidden">
                 <div className="backdrop-blur-md bg-gradient-to-br from-slate-800/80 via-slate-900/80 to-slate-950/80 border border-white/10 rounded-2xl p-8 shadow-xl h-full flex flex-col">
                   <div className="flex-1">
                     <h3 className="text-4xl font-bold text-white mb-2">{aboutMe.name}</h3>
                     <h4 className="text-2xl text-cyan-400 mb-8">{aboutMe.title}</h4>
-                    <p className="text-gray-300 leading-relaxed">{aboutMe.description}</p>
+                    <p className="text-gray-300 leading-relaxed text-start">{aboutMe.description}</p>
                   </div>
-                  <p className="text-sm text-gray-400 italic text-center">Hover to view contact details</p>
+                  <p className="text-sm mt-8 text-gray-400 italic text-center">Hover to view contact details</p>
                 </div>
               </div>
 
