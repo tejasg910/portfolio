@@ -20,8 +20,8 @@ const SkillmainSection = () => {
             <div className='flex justify-center text-white gap-4 '>
 
         
-            <h2 onClick={() => setSelectedSkillSection("scroll")} className={`p-4 text-xl ${selectedSkillSection === "scroll" ? "border-b-2" : ""}`}>Grid View</h2>
-                <h2 onClick={() => setSelectedSkillSection("solar")} className={`p-4 text-xl hidden md:flex ${selectedSkillSection === "solar" ? "border-b-2" : ""}`}>Solar View</h2>
+            <h2 onClick={() => setSelectedSkillSection("scroll")} className={`p-4 text-xl cursor-pointer ${selectedSkillSection === "scroll" ? "border-b-2" : ""}`}>Grid View</h2>
+                <h2 onClick={() => setSelectedSkillSection("solar")} className={`p-4 text-xl cursor-pointer hidden md:flex ${selectedSkillSection === "solar" ? "border-b-2" : ""}`}>Solar View</h2>
              
             </div>
 
