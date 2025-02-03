@@ -2,7 +2,6 @@ import { useState } from 'react'
 import ScrollingSkillsSection from './ScrollSkills'
 import SkillsOrbit from './Solar'
 import { SkillIconsCloud } from './CloudSkills';
-import { OrbitingCircleSkills } from './orbits/OribitSkillCircle';
 
 const SkillmainSection = () => {
   const [selectedSkillSection, setSelectedSkillSection] = useState('scroll');
