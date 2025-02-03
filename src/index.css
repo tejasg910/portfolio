@@ -1,0 +1,62 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  @keyframes border-beam {
+    0% {
+      clip-path: inset(0 0 98% 0);
+    }
+    25% {
+      clip-path: inset(0 98% 0 0);
+    }
+    50% {
+      clip-path: inset(98% 0 0 0);
+    }
+    75% {
+      clip-path: inset(0 0 0 98%);
+    }
+    100% {
+      clip-path: inset(0 0 98% 0);
+    }
+  }
+  
+  .animate-border-beam {
+    animation: border-beam 4s linear infinite;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+
+  
+@keyframes orbit-1 {
+    from {
+      transform: rotate(0deg) translateX(140px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(140px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes orbit-2 {
+    from {
+      transform: rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes orbit-3 {
+    from {
+      transform: rotate(0deg) translateX(260px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(260px) rotate(-360deg);
+    }
+  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
