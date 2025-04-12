@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { TimelineDemo } from "./ExpereinceTest.js"
 interface Experience {
   id: number;
   role: string;
@@ -27,7 +27,7 @@ const experiences: Experience[] = [
     type: "Full-time",
     period: {
       start: "Aug 2023",
-      end: "Present"
+      end: "May 2025"
     },
     current: true,
     description: "Leading development of modern web applications with focus on performance and user experience",
@@ -202,46 +202,11 @@ const ShinyBorder: React.FC = () => (
       <div className="min-h-screen bg-[#0D0D0D] relative px-4 py-16">
         <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-pink-600/30 blur-[120px]" />
         <div className="absolute right-0 top-0 h-[300px] w-[300px] rounded-full bg-blue-600/30 blur-[120px]" />
-        <motion.div 
-          className="max-w-6xl mx-auto relative z-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="text-center mb-12 space-y-4">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <h2 className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                Professional Journey
-              </h2>
-            </motion.div>
-            <motion.p 
-              className="text-slate-400"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              Click on each role to explore my professional experience
-            </motion.p>
-          </div>
   
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-min place-items-center"
-            layout
-          >
-            {experiences.map((experience) => (
-              <ExperienceCard
-                key={experience.id}
-                experience={experience}
-                isSelected={selectedId === experience.id}
-                onClick={() => setSelectedId(selectedId === experience.id ? null : experience.id)}
-              />
-            ))}
-          </motion.div>
-        </motion.div>
+
+        <div>
+          <TimelineDemo />
+        </div>
       </div>
     );
   };

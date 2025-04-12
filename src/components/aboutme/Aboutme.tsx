@@ -39,7 +39,7 @@ const AboutMeSection = () => {
 <div className="min-h-screen bg-[#0A0A0F] relative px-4 overflow-hidden">      {/* Background gradients */}
       <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-pink-600/30 blur-[120px]" />
       <div className="absolute right-0 top-0 h-[300px] w-[300px] rounded-full bg-blue-600/30 blur-[120px]" />
-      
+
       <div className="max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8">        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -110,6 +110,9 @@ const AboutMeSection = () => {
         </div>
         <BorderBeam size={250} duration={12} delay={9} />
       </div>
+
+
+      {/* <CardSpotlightDemo /> */}
 
     
     </div>

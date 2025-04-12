@@ -5,6 +5,7 @@ import SkillmainSection from './components/skills/SkillmainSection'
 import ExperienceSection from './components/experience/Experience'
 import AboutMeSection from './components/aboutme/Aboutme'
 import Footer from './components/footer/Footer'
+import MyWorkSection from './components/work/MyWork'
 
 function App() {
   const { scrollY } = useScroll();
@@ -59,6 +60,14 @@ function App() {
         </div>
 
 
+        <div className='relative'>
+          <motion.section
+            className=""
+
+          >
+            <MyWorkSection />
+          </motion.section>
+        </div>
         <div className='relative'>
           <motion.section
             className=""

@@ -1,5 +1,7 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 
+import { AnimatedTooltipPreview } from './Links';
+
 const Footer = () => {
   return (
     <footer className="bg-black text-gray-300 border-t border-gray-800 py-10 pb-24">
@@ -8,7 +10,12 @@ const Footer = () => {
         <h2 className="text-4xl font-semibold text-white mb-6">Let's Connect</h2>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-8 mb-8">
+<div className='my-4'>
+
+
+        <AnimatedTooltipPreview />
+        </div>
+        {/* <div className="flex justify-center gap-8 mb-8">
           <a
             href="https://github.com/tejasg910"
             target="_blank"
@@ -34,7 +41,7 @@ const Footer = () => {
           >
             <Mail size={32} />
           </a>
-        </div>
+        </div> */}
 
         {/* Developer Credit */}
         <div className="text-gray-400">
