@@ -63,6 +63,9 @@ export default {
             backgroundColor: '#2D3748', // Lighter gray track
           },
         },
+        '.scroll-smooth': {
+          'scroll-behavior': 'smooth',
+        },
       });
     }),
   ],

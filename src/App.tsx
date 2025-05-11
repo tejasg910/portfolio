@@ -6,6 +6,8 @@ import ExperienceSection from './components/experience/Experience'
 import AboutMeSection from './components/aboutme/Aboutme'
 import Footer from './components/footer/Footer'
 import MyWorkSection from './components/work/MyWork'
+import { useEffect } from 'react'
+import Lenis from '@studio-freight/lenis'
 
 function App() {
   const { scrollY } = useScroll();
@@ -18,11 +20,27 @@ function App() {
     ['100vh', '0vh'] // Output range
   );
 
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2, // adjust speed
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    })
 
+    function raf(time: any) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    return () => {
+      lenis.destroy()
+    }
+  }, [])
   return (
     <>
-      <main className="relative">
-      
+      <main className="relative scroll-smooth">
+
 
         {/* Fixed Hero Section */}
         <section className="fixed inset-0 w-full" id='herosection'>
@@ -32,13 +50,13 @@ function App() {
         {/* Scrollable Container */}
         <div className="relative">
           {/* Spacer for first section */}
-          <div className="h-screen w-full"  />
+          <div className="h-screen w-full" />
 
           {/* Skills Section with Motion */}
           <motion.section
             className="w-full"
             style={{ top: skillsTransform }}
-             id='skills'
+            id='skills'
           >
             <SkillmainSection />
           </motion.section>
