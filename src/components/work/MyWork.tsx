@@ -179,9 +179,32 @@ const WorkSection = () => {
               {/* Project content */}
               <div className="absolute inset-0 z-20 p-6 flex flex-col justify-between">
                 <div>
-                  <h3 className={`text-2xl font-bold bg-gradient-to-r ${project.color} bg-clip-text text-transparent mb-2`}>
-                    {project.title}
-                  </h3>
+                 <h3
+  className={`
+    relative
+    inline-block               /* shrink‐wrap around the text */
+    px-3 py-1                   /* padding inside the pill */
+    text-2xl font-bold
+    bg-clip-text text-transparent
+    bg-gradient-to-r ${project.color}
+  `}
+>
+  {/* 1) Your soft radial halo */}
+  <span
+    className="
+      absolute inset-0           /* fill the h3’s padded box */
+      rounded-full               /* pill shape exactly matching padding */
+      z-[-1]                     /* send it behind the text */
+      bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.6)_30%,rgba(0,0,0,0)_80%)]
+    "
+  />
+
+  {project.title}
+</h3>
+
+
+
+
                   <p className="text-gray-300 mb-4 line-clamp-3 md:line-clamp-none">
                     {project.description}
                   </p>
