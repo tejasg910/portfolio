@@ -68,14 +68,14 @@ function App() {
             <MyWorkSection />
           </motion.section>
         </div>
-        <div className='relative'>
+        {/* <div className='relative'>
           <motion.section
             className=""
 
           >
             <AboutMeSection />
           </motion.section>
-        </div>
+        </div> */}
 
 
 
