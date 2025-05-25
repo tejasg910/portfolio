@@ -3,11 +3,10 @@ import './App.css'
 import HeroSection from './components/hero/HeroSection'
 import SkillmainSection from './components/skills/SkillmainSection'
 import ExperienceSection from './components/experience/Experience'
-import AboutMeSection from './components/aboutme/Aboutme'
 import Footer from './components/footer/Footer'
 import MyWorkSection from './components/work/MyWork'
-import { useEffect } from 'react'
-import Lenis from '@studio-freight/lenis'
+
+import { ReactLenis, useLenis } from 'lenis/react'
 
 function App() {
   const { scrollY } = useScroll();
@@ -20,25 +19,26 @@ function App() {
     ['100vh', '0vh'] // Output range
   );
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2, // adjust speed
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    })
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 1.2, // adjust speed
+  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //   })
 
-    function raf(time: any) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
+  //   function raf(time: any) {
+  //     lenis.raf(time)
+  //     requestAnimationFrame(raf)
+  //   }
 
-    requestAnimationFrame(raf)
+  //   requestAnimationFrame(raf)
 
-    return () => {
-      lenis.destroy()
-    }
-  }, [])
+  //   return () => {
+  //     lenis.destroy()
+  //   }
+  // }, [])
   return (
     <>
+      <ReactLenis root />
       <main className="relative scroll-smooth">
 
 
