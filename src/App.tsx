@@ -6,7 +6,7 @@ import ExperienceSection from './components/experience/Experience'
 import Footer from './components/footer/Footer'
 import MyWorkSection from './components/work/MyWork'
 
-import { ReactLenis, useLenis } from 'lenis/react'
+import { ReactLenis } from 'lenis/react'
 
 function App() {
   const { scrollY } = useScroll();
