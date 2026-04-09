@@ -33,6 +33,7 @@ import Slack from "../../assets/projects/slack.png"
 import RemoteJobZone from "../../assets/projects/remotejobzone.png"
 import InterviewSheduler from "../../assets/projects/interviewsheduler.png"
 import Ecommerce from "../../assets/projects/ecommerce.png"
+import Scorzz from "../../assets/projects/Scorzz.png"
 const Index = () => {
   return (
     <div className="min-h-screen bg-[#0A0A0F] relative overflow-hidden">
@@ -73,15 +74,25 @@ const WorkSection = () => {
       live: "https://ai-agent-frontend-five.vercel.app",
       color: "from-blue-500 to-cyan-400"
     },
-    {
-      title: "E-Commerce Platform",
-      description: "A fully responsive e-commerce platform with dynamic product filtering, cart functionality, and secure checkout process.",
-      skills: ["React", "Redux", "Node.js", "Express", "MongoDB"],
-      image: Ecommerce,
-      github: "https://github.com/tejasg910/ecommerce-micro",
-      live: "",
-      color: "from-purple-500 to-blue-500"
+        {
+      title: "Scorzz",
+      description: "Interactive quiz platform for learning, practicing knowledge, tracking progress, and solving engaging quizzes with others.",
+      skills: ["Next.js", "TailwindCSS", "Shadcn UI", "Polar", "Drizzle"],
+      image: Scorzz,
+      github: "https://github.com/tejasg910/Scorezy",
+      live: "https://scorezz.vercel.app",
+      color: "from-purple-500 to-blue-400"
     },
+    // {
+    //   title: "E-Commerce Platform",
+    //   description: "A fully responsive e-commerce platform with dynamic product filtering, cart functionality, and secure checkout process.",
+    //   skills: ["React", "Redux", "Node.js", "Express", "MongoDB"],
+    //   image: Ecommerce,
+    //   github: "https://github.com/tejasg910/ecommerce-micro",
+    //   live: "",
+    //   color: "from-purple-500 to-blue-500"
+    // },
+
     {
       title: "Slack Clone",
       description: "Copy of slack, having almost all features including real time chats, file uploads, emoji reactions and much more.",
