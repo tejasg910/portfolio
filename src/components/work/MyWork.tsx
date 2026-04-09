@@ -33,7 +33,7 @@ import Slack from "../../assets/projects/slack.png"
 import RemoteJobZone from "../../assets/projects/remotejobzone.png"
 import InterviewSheduler from "../../assets/projects/interviewsheduler.png"
 import Ecommerce from "../../assets/projects/ecommerce.png"
-import Scorzz from "../../assets/projects/Scorzz.png"
+import Scorzz from "../../assets/projects/Scrozz.png"
 const Index = () => {
   return (
     <div className="min-h-screen bg-[#0A0A0F] relative overflow-hidden">
